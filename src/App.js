@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Detail from './pages/Detail';
+import { Route, Routes } from 'react-router';
 
 const App = () => {
 
@@ -64,7 +65,7 @@ const multiply= useMemo(()=>{
 
       <Header />
 
-      <Home />
+      {/* <Home />
 
       <Contact />
 
@@ -75,7 +76,7 @@ const multiply= useMemo(()=>{
         <button onClick={()=>setCount1(count1+1)}>Add1</button>
         <button onClick={()=>setCount2(count2+1)}>Add2</button>
 
-       </div>
+       </div> */}
 
 
 
@@ -89,14 +90,12 @@ const multiply= useMemo(()=>{
      {/* <button onClick={()=> setSec('Mysterious')}>increment</button> */}
 
       <Routes>
-         <Route path='/'element={<Home />}/>
+      <Route path='/'element={<Home />}/>
          <Route path='about'element={<About />} />
         <Route path='contact'element={<Contact />} />
-        <Route path='detail'element={<Detail />} />
-
-        {/* <Route path='*'element={<Notfound />} /> */}
-        
-        </Routes>
+        <Route path='detail'element={<Detail />} /> 
+      </Routes>
+      
       
     </div>
   )
